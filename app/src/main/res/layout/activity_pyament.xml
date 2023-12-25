@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bacgroun_payment"
+	tools:context=".views.Pyament_activity">
+	
+	
+	<!-- Payment Details Section -->
+	<LinearLayout
+		android:id="@+id/paymentDetailsLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="#F9F3F4"
+		android:padding="16dp"
+		
+		android:layout_marginBottom="16dp">
+		
+		<!-- Payment Amount -->
+		<TextView
+			android:id="@+id/amountTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Payment"
+			android:textSize="18sp"
+			android:textColor="#FF4081"
+			android:fontFamily="sans-serif-medium"
+			android:layout_marginBottom="8dp"/>
+		
+		<!-- Credit Card Number -->
+		<EditText
+			android:id="@+id/creditCardEditText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:background="#E5D1D3"
+			android:hint="Credit Card Number"
+			android:inputType="number"
+			android:maxLength="16"
+			android:minHeight="48dp" />
+		
+		<!-- Expiry Date and CVV -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			
+			<EditText
+				android:id="@+id/expiryDateEditText"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="8dp"
+				android:layout_weight="1"
+				android:background="#E5D1D3"
+				android:hint="Expiry Date"
+				android:inputType="number"
+				android:maxLength="4"
+				tools:ignore="TouchTargetSizeCheck" />
+			
+			<EditText
+				android:id="@+id/cvvEditText"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:hint="CVV"
+				android:inputType="number"
+				android:maxLength="3"
+				android:background="#E5D1D3"/>
+		</LinearLayout>
+	</LinearLayout>
+	
+	<!-- Proceed Button -->
+	<Button
+		android:id="@+id/proceedButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/paymentDetailsLayout"
+		android:layout_marginTop="16dp"
+		android:background="#FF4081"
+		android:text="Proceed to Payment"
+		android:textColor="#212121" />
+
+</RelativeLayout>
