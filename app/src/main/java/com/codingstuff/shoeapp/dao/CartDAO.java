@@ -25,3 +25,5 @@ public interface CartDAO {
     @Query("DELETE FROM shoe_table")
     void deleteAllItems();
 }
+//The primary purpose of a DAO is to provide an interface to interact with a data source without exposing the underlying implementation details.
+// It typically contains methods to perform CRUD (Create, Read, Update, Delete) operations on the data source.
